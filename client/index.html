@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>Choir Performer Placement</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="main">
+
+			<!-- DO NOT RENAME ANY IDs or localStorage gets out of sync!! -->
+
+			<!-- Fixed Items -->
+			<div class="fixed">
+
+				<div class="rail">rail</div>
+				<div class="stage">stage floor</div>
+				<div class="podium">podium</div>
+				<div class="riser" id="big-riser-1" style="height: calc(16 * 5px); left: 240px; top: 520px;">
+					big-riser-1</div>
+				<div class="riser" id="big-riser-2" style="height: calc(16 * 5px); left: 959px; top: 520px;">
+					big-riser-2</div>
+				<div class="riser" id="sm-riser-1" style="height: calc(8 * 5px); left: 164px; top: 456px; z-index: 495;">
+					sm-riser-1</div>
+				<div class="riser" id="sm-riser-2" style="height: calc(8 * 5px); left: 1024px; top: 456px; z-index: 495;">
+					sm-riser-2</div>
+				<div class="riser" id="mini-riser-1" style="width: calc(48 * 5px); height: calc(7.5 * 5px); left: 719px ; top: 562px;">
+					mini-riser-1</div>
+			</div>
+
+			<div class="moveable">
+
+				<!-- Risers -->
+
+				<!-- People -->
+				<div id="1" style="height: calc(66 * 5px); background: linear-gradient(to right, #f0a0a5, #FACD91);" ondragstart="dragInit(event)" draggable="true">Person 1, 66 in.</div>
+				<div id="2" style="height: calc(65 * 5px); background-color: #f0a0a5;" ondragstart="dragInit(event)" draggable="true">Person 2, 65 in.</div>
+				<div id="3" style="height: calc(65 * 5px); background-color: lightgray;" ondragstart="dragInit(event)" draggable="true">Person 3, 65 in.</div>
+				<div id="4" style="height: calc(63 * 5px); background-color: #f0a0a5;" ondragstart="dragInit(event)" draggable="true">Person 4, 63 in.</div>
+				<div id="5" style="height: calc(62 * 5px); background-color: lightgray;" ondragstart="dragInit(event)" draggable="true">Person 5, 62 in.</div>
+				<div id="6" style="height: calc(62 * 5px); background-color: #8CE5F6;" ondragstart="dragInit(event)" draggable="true">Person 6, 62 in.</div>
+				<div id="7" style="height: calc(62 * 5px); background: linear-gradient(to right, lightgray, #99CDA0);" ondragstart="dragInit(event)" draggable="true">Person 7, 62 in.</div>
+				<div id="8" style="height: calc(61 * 5px); background-color: lightgray;" ondragstart="dragInit(event)" draggable="true">Person 8, 61 in.</div>
+				<div id="9" style="height: calc(60 * 5px); background: linear-gradient(to right, #f0a0a5, #99CDA0);" ondragstart="dragInit(event)" draggable="true">Person 9, 60 in.</div>
+				<div id="10" style="height: calc(59 * 5px); background-color: #8CE5F6;" ondragstart="dragInit(event)" draggable="true">Person 10, 59 in.</div>
+				<div id="11" style="height: calc(58 * 5px); background-color: #F2ED99;" ondragstart="dragInit(event)" draggable="true">Person 11, 58 in.</div>
+				<div id="12" style="height: calc(58 * 5px); background-color: #D5E39F;" ondragstart="dragInit(event)" draggable="true">Person 12, 58 in.</div>
+				<div id="13" style="height: calc(58 * 5px); background-color: #FACD91;" ondragstart="dragInit(event)" draggable="true">Person 13, 58 in.</div>
+				<div id="14" style="height: calc(57 * 5px); background-color: #8CE5F6;" ondragstart="dragInit(event)" draggable="true">Person 14, 57 in.</div>
+				<div id="15" style="height: calc(57 * 5px); background-color: #D5E39F;" ondragstart="dragInit(event)" draggable="true">Person 15, 57 in.</div>
+				<div id="16" style="height: calc(55 * 5px); background-color: #FACD91;" ondragstart="dragInit(event)" draggable="true">Person 16, 55 in.</div>
+				<div id="17" style="height: calc(55 * 5px); background-color: lightgray;" ondragstart="dragInit(event)" draggable="true">Person 17, 55 in.</div>
+				<div id="18" style="height: calc(55 * 5px); background: linear-gradient(to right, lightgray, #FACD91);" ondragstart="dragInit(event)" draggable="true">Person 18, 55 in.</div>
+				<div id="19" style="height: calc(55 * 5px); background-color: #9A8BC1;" ondragstart="dragInit(event)" draggable="true">Person 19, 55 in.</div>
+				<div id="20" style="height: calc(55 * 5px); background-color: #F2ED99;" ondragstart="dragInit(event)" draggable="true">Person 20, 55 in.</div>
+				<div id="21" style="height: calc(54 * 5px); background-color: #D5E39F;" ondragstart="dragInit(event)" draggable="true">Person 21, 54 in.</div>
+				<div id="22" style="height: calc(54 * 5px); background-color: #9A8BC1;" ondragstart="dragInit(event)" draggable="true">Person 22, 54 in.</div>
+				<div id="23" style="height: calc(53 * 5px); background-color: #D5E39F;" ondragstart="dragInit(event)" draggable="true">Person 23, 53 in.</div>
+				<div id="24" style="height: calc(53 * 5px); background-color: #f0a0a5;" ondragstart="dragInit(event)" draggable="true">Person 24, 53 in.</div>
+				<div id="25" style="height: calc(53 * 5px); background-color: #f0a0a5;" ondragstart="dragInit(event)" draggable="true">Person 25, 53 in.</div>
+				<div id="26" style="height: calc(53 * 5px); background-color: lightgray;" ondragstart="dragInit(event)" draggable="true">Person 26, 53 in.</div>
+				<div id="27" style="height: calc(52 * 5px); background-color: #9A8BC1;" ondragstart="dragInit(event)" draggable="true">Person 27, 52 in.</div>
+				<div id="28" style="height: calc(52 * 5px); background-color: #F2ED99;" ondragstart="dragInit(event)" draggable="true">Person 28, 52 in.</div>
+				<div id="29" style="height: calc(52 * 5px); background: linear-gradient(to right, #F2ED99, #FACD91);" ondragstart="dragInit(event)" draggable="true">Person 29, 52 in.</div>
+				<div id="30" style="height: calc(51 * 5px); background: linear-gradient(to right, lightgray, #D5E39F);" ondragstart="dragInit(event)" draggable="true">Person 30, 51 in.</div>
+				<div id="31" style="height: calc(51 * 5px); background-color: #D5E39F;" ondragstart="dragInit(event)" draggable="true">Person 31, 51 in.</div>
+				<div id="32" style="height: calc(51 * 5px); background-color: #99CDA0;" ondragstart="dragInit(event)" draggable="true">Person 32, 51 in.</div>
+				<div id="33" style="height: calc(50 * 5px); background-color: #99CDA0;" ondragstart="dragInit(event)" draggable="true">Person 33, 50 in.</div>
+				<div id="34" style="height: calc(50 * 5px); background-color: #8CE5F6;" ondragstart="dragInit(event)" draggable="true">Person 34, 50 in.</div>
+				<div id="35" style="height: calc(50 * 5px); background-color: lightgray;" ondragstart="dragInit(event)" draggable="true">Person 35, 50 in.</div>
+				<div id="36" style="height: calc(50 * 5px); background-color: #99CDA0;" ondragstart="dragInit(event)" draggable="true">Person 36, 50 in.</div>
+				<div id="37" style="height: calc(49 * 5px); background-color: lightgray;" ondragstart="dragInit(event)" draggable="true">Person 37, 49 in.</div>
+				<div id="38" style="height: calc(48 * 5px); background-color: #9A8BC1;" ondragstart="dragInit(event)" draggable="true">Person 38, 48 in.</div>
+				<div id="39" style="height: calc(48 * 5px); background-color: #99CDA0;" ondragstart="dragInit(event)" draggable="true">Person 39, 48 in.</div>
+				<div id="40" style="height: calc(48 * 5px); background-color: #99CDA0;" ondragstart="dragInit(event)" draggable="true">Person 40, 48 in.</div>
+				<div id="41" style="height: calc(48 * 5px); background-color: #f0a0a5;" ondragstart="dragInit(event)" draggable="true">Person 41, 48 in.</div>
+				<div id="42" style="height: calc(47 * 5px); background-color: #f0a0a5;" ondragstart="dragInit(event)" draggable="true">Person 42, 47 in.</div>
+				<div id="43" style="height: calc(46 * 5px); background-color: #F2ED99;" ondragstart="dragInit(event)" draggable="true">Person 43, 46 in.</div>
+				<div id="44" style="height: calc(46 * 5px); background-color: #f0a0a5;" ondragstart="dragInit(event)" draggable="true">Person 44, 46 in.</div>
+				<div id="45" style="height: calc(46 * 5px); background-color: #9A8BC1;" ondragstart="dragInit(event)" draggable="true">Person 45, 46 in.</div>
+				<div id="46" style="height: calc(46 * 5px); background-color: #9A8BC1;" ondragstart="dragInit(event)" draggable="true">Person 46, 46 in.</div>
+				<div id="47" style="height: calc(46 * 5px); background-color: #D5E39F;" ondragstart="dragInit(event)" draggable="true">Person 47, 46 in.</div>
+				<div id="48" style="height: calc(45 * 5px); background-color: #8CE5F6;" ondragstart="dragInit(event)" draggable="true">Person 48, 45 in.</div>
+				<div id="49" style="height: calc(45 * 5px); background-color: #F2ED99;" ondragstart="dragInit(event)" draggable="true">Person 49, 45 in.</div>
+				<div id="50" style="height: calc(45 * 5px); background-color: #9A8BC1;" ondragstart="dragInit(event)" draggable="true">Person 50, 45 in.</div>
+				<div id="51" style="height: calc(45 * 5px); background-color: #D5E39F;" ondragstart="dragInit(event)" draggable="true">Person 51, 45 in.</div>
+				<div id="52" style="height: calc(45 * 5px); background-color: #f0a0a5;" ondragstart="dragInit(event)" draggable="true">Person 52, 45 in.</div>
+				<div id="53" style="height: calc(44 * 5px); background-color: #8CE5F6;" ondragstart="dragInit(event)" draggable="true">Person 53, 44 in.</div>
+				<div id="54" style="height: calc(44 * 5px); background-color: #f0a0a5;" ondragstart="dragInit(event)" draggable="true">Person 54, 44 in.</div>
+				<div id="55" style="height: calc(42 * 5px); background-color: #D5E39F;" ondragstart="dragInit(event)" draggable="true">Person 55, 42 in.</div>
+				<div id="56" style="height: calc(42 * 5px); background-color: #f0a0a5;" ondragstart="dragInit(event)" draggable="true">Person 56, 42 in.</div>
+				<div id="57" style="height: calc(41 * 5px); background-color: white;" ondragstart="dragInit(event)" draggable="true">Person 57, 41 in.</div>
+				<div id="58" style="height: calc(41 * 5px); background-color: #f0a0a5;" ondragstart="dragInit(event)" draggable="true">Person 58, 41 in.</div>
+				<div id="59" style="height: calc(41 * 5px); background-color: #f0a0a5;" ondragstart="dragInit(event)" draggable="true">Person 59, 41 in.</div>
+				<div id="60" style="height: calc(40 * 5px); background-color: white;" ondragstart="dragInit(event)" draggable="true">Person 60, 40 in.</div>
+			</div>
+		</div>
+		<script src="js/index.js"></script>
+	</body>
+</html>
